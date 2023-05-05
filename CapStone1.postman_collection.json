@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "322e10dd-c849-4516-a074-49b62bce1295",
+		"name": "CapStone1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test1@gmail.com\", \r\n    \"mat_khau\": \"1234\", \r\n    \"ho_ten\": \"userTest1\", \r\n    \"tuoi\": 26, \r\n    \"anh_dai_dien\": \"https://www.omt.de/uploads/memes-10.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/sign-up",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test1@gmail.com\",\r\n    \"mat_khau\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/log-in",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"log-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Images (Home)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/api/home",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"home"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Images By Name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"keyword\": \"a\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/home/search",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"home",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Image Detail include User Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/detail/image/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"detail",
+						"image",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Comment By Image",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/detail/image/comment/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"detail",
+						"image",
+						"comment",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Save Info by Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/api/detail/image/save-info/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"detail",
+						"image",
+						"save-info",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"nguoi_dung_id\": 1,\r\n            \"hinh_id\": 1,\r\n            \"noi_dung\": \"Test3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/detail/image/comment/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"detail",
+						"image",
+						"comment",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/profile/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"profile",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Saved Image By User Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjIsImVtYWlsIjoidGVzdDFAZ21haWwuY29tIiwibWF0X2toYXUiOiIkMmIkMTAkLzI0am1ndXYycUVMVE1KeWQ0bkJYT1ZHRkFtRUlGZVJtTFVEdzdSdE9xN2Eyd1BxdWtYRjIiLCJob190ZW4iOiJ1c2VyVGVzdDEiLCJ0dW9pIjoyNiwiYW5oX2RhaV9kaWVuIjoiaHR0cHM6Ly93d3cub210LmRlL3VwbG9hZHMvbWVtZXMtMTAuanBnIn0sImlhdCI6MTY4MzIyNTQ4MywiZXhwIjoxNjgzMjI1NzgzfQ.F06Y1clc1JrVEQbGZZy3bDL7qa04Twy52c_m4uaEcFs",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/profile/get-save-image/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"profile",
+						"get-save-image",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Image By User Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/profile/get-image/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"profile",
+						"get-image",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Image",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjIsImVtYWlsIjoidGVzdDFAZ21haWwuY29tIiwibWF0X2toYXUiOiIkMmIkMTAkLzI0am1ndXYycUVMVE1KeWQ0bkJYT1ZHRkFtRUlGZVJtTFVEdzdSdE9xN2Eyd1BxdWtYRjIiLCJob190ZW4iOiJ1c2VyVGVzdDEiLCJ0dW9pIjoyNiwiYW5oX2RhaV9kaWVuIjoiaHR0cHM6Ly93d3cub210LmRlL3VwbG9hZHMvbWVtZXMtMTAuanBnIn0sImlhdCI6MTY4MzIyNTQ4MywiZXhwIjoxNjgzMjI1NzgzfQ.F06Y1clc1JrVEQbGZZy3bDL7qa04Twy52c_m4uaEcFs",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hinh_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/profile/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"profile",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"ten_hinh\": \"TestUpload\", \r\n            \"duong_dan\": \"https://site.surveysparrow.com/wp-content/uploads/2022/09/funny-hr-meme-19.jpeg\", \r\n            \"mo_ta\": \"TestUpload\", \r\n            \"nguoi_dung_id\": 1\r\n        }   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/profile/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"profile",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Profile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n            \"email\": \"update@gmail.com\", \r\n            \"mat_khau\": \"1234\", \r\n            \"ho_ten\": \"update\", \r\n            \"tuoi\": 25, \r\n            \"anh_dai_dien\": \"N/A\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/profile/update/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"profile",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

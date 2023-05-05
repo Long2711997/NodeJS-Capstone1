@@ -30,7 +30,8 @@ class binh_luan extends Sequelize.Model {
     },
     ngay_binh_luan: {
       type: DataTypes.DATEONLY,
-      allowNull: true
+      allowNull: true,
+      defaultValue: Sequelize.NOW,
     },
     noi_dung: {
       type: DataTypes.STRING(255),
